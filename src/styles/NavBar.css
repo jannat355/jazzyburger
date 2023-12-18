@@ -1,0 +1,11 @@
+.custom-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 5px 10px; /* Adjust padding as needed */
+    border: 1px solid #ccc; /* Add your border styling */
+    border-radius: 5px; /* Add border radius if desired */
+  }
+  .custom-select:focus {
+    outline: none; /* Remove focus outline */
+  }
