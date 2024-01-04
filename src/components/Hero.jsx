@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useContext } from "react";
 import heroImg from "../assets/image 3.jpg";
 import "../styles/Hero.css";
 import Card from "react-bootstrap/Card";
@@ -6,10 +6,18 @@ import Button from "react-bootstrap/Button";
 import face from "../assets/Frame 3.svg";
 import ingre from "../assets/Group 4.svg";
 // import useFetch from '../customhooks/useFetch'
+import CartContext from "../context/CartContext";
+import { ToastContainer, toast } from 'react-toastify';
 
 const Hero = () => {
   const [data, setData] = useState([]);
   const [loading, setIsLoading] = useState(false);
+  const{handleAddToCart,handleDecrease,handleIncrease}=useContext(CartContext)
+const notify = () => {
+    toast("An item has been added",{
+      position:toast.POSITION.TOP_CENTER
+    });
+  };
   let fetchedData = async () => {
     try {
       setIsLoading(true);
@@ -62,7 +70,7 @@ const Hero = () => {
 
           <div className="date mt-5">
             {data.map((datum) => {
-              const { title, image, price, _id } = datum;
+              const { title, image, price, _id,quantity } = datum;
 
               return (
                 <div key={_id} className="date mt-5 gap-2">
@@ -83,13 +91,13 @@ const Hero = () => {
                         </div>
 
                         <div class="quantity-container ">
-                          <div class="quantity-btn" onClick={decrement}>
+                          <div class="quantity-btn" onClick={()=>{handleDecrease()}}>
                             -
                           </div>
                           <div class="quantity-btn quantity" id="quantity">
-                            1
+                            {quantity}
                           </div>
-                          <div class="quantity-btn" onClick={increment}>
+                          <div class="quantity-btn" onClick={()=>{handleIncrease(_id)}}>
                             +
                           </div>
                         </div>
@@ -97,15 +105,16 @@ const Hero = () => {
 
                       <img src={ingre} alt="" />
 
-                      <Button className="btn-danger w-100 mt-3">
+                      <Button className="btn-danger w-100 mt-3" onClick={()=>{handleAddToCart(datum);notify()}}>
                         + Add To Cart
                       </Button>
+                      <ToastContainer />
                     </Card.Body>
                   </Card>
                 </div>
               );
             })}
-          </div>
+          </div> c
         </div>
       </main>
     </>
