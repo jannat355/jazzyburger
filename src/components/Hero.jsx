@@ -45,17 +45,17 @@ const notify = () => {
     })
   }
 
-  function decrement() {
-    if (quantity > 0) {
-      quantity--;
-      updateQuantity();
-    }
-  }
+  // function decrement() {
+  //   if (quantity > 0) {
+  //     quantity--;
+  //     updateQuantity();
+  //   }
+  // }
 
-  function increment() {
-    quantity++;
-    updateQuantity();
-  }
+  // function increment() {
+  //   quantity++;
+  //   updateQuantity();
+  // }
 
   return (
     <>
@@ -91,7 +91,7 @@ const notify = () => {
                         </div>
 
                         <div class="quantity-container ">
-                          <div class="quantity-btn" onClick={()=>{handleDecrease()}}>
+                          <div class="quantity-btn" onClick={()=>{handleDecrease(_id)}}>
                             -
                           </div>
                           <div class="quantity-btn quantity" id="quantity">
