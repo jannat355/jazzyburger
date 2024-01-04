@@ -65,7 +65,7 @@ const notify = () => {
         <div className="d-flex justify-content-between gap-5 ">
           <img src={face} alt="" className="d-none d-lg-block w-75 mt-5 " />
 
-          {loading && <h1>loading......</h1>}
+          {loading && <h1>Loading.......</h1>}
           {/* {error && <h1>Error...... something went wrong</h1>} */}
 
           <div className="date mt-5">
