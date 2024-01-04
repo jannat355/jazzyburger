@@ -54,7 +54,7 @@ const Navbar = () => {
 
      <section className='d-flex justify-content-between align-items-center gap-3'>
           <img src={foodpan} alt="" className='img-fluid'/>
-         <Link to='/Order'className='text-decoration-none'> <h5 className='d-none d-lg-block mt-2 text-danger'>All products</h5></Link>
+         <Link className='text-decoration-none'> <h5 className='d-none d-lg-block mt-2 text-danger'>All products</h5></Link>
          <div>
             <div onClick={()=>(!see ? setSee(true) :setSee(false))} className='d-flex '>
             <img src={guest} alt="" />
