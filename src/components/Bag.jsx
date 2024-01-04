@@ -58,7 +58,7 @@ const Bag = () => {
           <hr />
             {cart.length > 0 ? (
               <Link className="btn btn-success w-100" to='/Order'>
-                proceed to Checkout
+                proceed to checkout
               </Link>
             ) : (
               <>
