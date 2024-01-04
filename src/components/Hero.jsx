@@ -114,7 +114,7 @@ const notify = () => {
                 </div>
               );
             })}
-          </div> c
+          </div> 
         </div>
       </main>
     </>
