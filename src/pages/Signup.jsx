@@ -27,7 +27,7 @@ const Signup = () => {
       verifypassword
     }
     try {
-      const data = await fetch('http://localhost:5757/api/user/registration',{
+      const data = await fetch('https://project2-48m7.onrender.com/api/user/registration',{
         method:"POST",
         headers:{
           "Content-type": "application/json",

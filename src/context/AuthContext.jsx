@@ -6,7 +6,7 @@ export const AuthProvider = ({ children }) => {
   const [loggedIn, setLoggedIn] = useState(undefined);
   const token = localStorage.getItem("token");
   async function getLoggedIn() {
-    const res = await fetch("http://localhost:5757/api/user/isloggedin", {
+    const res = await fetch("https://project2-48m7.onrender.com/api/user/isloggedin", {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,

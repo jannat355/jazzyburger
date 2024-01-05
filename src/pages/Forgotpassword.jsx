@@ -22,7 +22,7 @@ const ForgotPassword = () => {
       email
     }
     try {
-      const data = await fetch('http://localhost:5757/api/user/forgotpassword', { method:"POST",
+      const data = await fetch('https://project2-48m7.onrender.com/api/user/forgotpassword', { method:"POST",
       headers:{
         "Content-type": "application/json",
       },

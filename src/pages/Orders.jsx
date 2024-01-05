@@ -23,7 +23,7 @@ const Orders = () => {
     totalprice:totalPrice
   }
   const order = async()=>{
-    const fetcher = await fetch('http://localhost:5757/api/user/isloggedin',{
+    const fetcher = await fetch('https://project2-48m7.onrender.com/api/user/isloggedin',{
         method:"POST",
         headers:{
             "Content-type": "application/json",

@@ -29,7 +29,7 @@ const ResetPassword = () => {
 
         }
         try {
-            const data = await fetch(`http://localhost:5757/api/user/resetpassword/${resetToken}`, { method:"PUT",
+            const data = await fetch(`https://project2-48m7.onrender.com/api/user/resetpassword/${resetToken}`, { method:"PUT",
             headers:{
               "Content-type": "application/json",
             },
@@ -74,12 +74,12 @@ const ResetPassword = () => {
 
             <FloatingLabel
               controlId="floatingInput"
-              label="example@mail.com"
+              label="Enter new password"
               className="mb-3"
             >
               <Form.Control
                 type="password"
-                placeholder="name@example.com"
+                placeholder="password"
                 className="border border-3 rounded"
                 value={password}
                 required
@@ -90,12 +90,12 @@ const ResetPassword = () => {
 
             <FloatingLabel
               controlId="floatingInput"
-              label="example@mail.com"
+              label="password"
               className="mb-3"
             >
               <Form.Control
                 type="password"
-                placeholder="name@example.com"
+                placeholder="new passsword"
                 className="border border-3 rounded"
                 value={confirmPassword}
                 onChange={(e)=>setConfirmPassword(e.target.value)}

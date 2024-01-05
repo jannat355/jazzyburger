@@ -20,7 +20,7 @@ const Navbar = () => {
     
 
     let getUser = async () => {
-      let response = await fetch('http://localhost:5757/api/user/getusername', {
+      let response = await fetch('https://project2-48m7.onrender.com/api/user/getusername', {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,

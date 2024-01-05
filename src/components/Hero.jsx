@@ -21,7 +21,7 @@ const notify = () => {
   let fetchedData = async () => {
     try {
       setIsLoading(true);
-      let fetchRequest = await fetch("http://localhost:5757/api/products");
+      let fetchRequest = await fetch("https://project2-48m7.onrender.com/api/products");
       let fetchResponse = await fetchRequest.json();
       setData(fetchResponse.products);
       console.log(fetchResponse.products);

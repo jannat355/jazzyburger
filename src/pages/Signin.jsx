@@ -19,7 +19,7 @@ const Signin = () => {
       password,
     }
     try {
-      const data = await fetch('http://localhost:5757/api/user/login',{
+      const data = await fetch('https://project2-48m7.onrender.com/api/user/login',{
         method:"POST",
         headers:{
           "Content-type": "application/json",
