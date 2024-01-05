@@ -1,9 +1,9 @@
-require('dotenv/config')
+require ('dotenv/config')
 const express = require('express')
 const app = express()
 const cors = require('cors')
 const morgan = require('morgan')
-const port = process.env.PORT || 5757
+const port = process.env.PORT || 5656
 const connect =require('./config/db')
 const productRoute = require('./routes/productRoute')
 const userRoute = require ('./routes/userRoute')
