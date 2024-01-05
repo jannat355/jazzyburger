@@ -1,0 +1,48 @@
+.hero-img{
+    max-height: 30rem;
+}
+
+.date{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* gap: 1rem; */
+    height: auto;
+}
+
+ .quantity-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .quantity-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 30px;
+      height: 30px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .quantity-btn:hover {
+      background-color: #f0f0f0;
+    }
+
+    .quantity-btn:first-child {
+      border-radius: 5px 0 0 5px;
+      border-right: none;
+    }
+
+    .quantity-btn:last-child {
+      border-radius: 0 5px 5px 0;
+      border-left: none;
+    }
+
+    @media  screen and (max-width: 480px){
+          .date{
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: center;
+          }
+    }
